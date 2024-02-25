@@ -8,3 +8,9 @@
 #   with-sources: false
 
 -e file:.
+asgiref==3.7.2
+    # via django
+django==5.0.2
+    # via treehouselondon
+sqlparse==0.4.4
+    # via django

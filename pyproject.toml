@@ -5,7 +5,9 @@ description = "Directory of Co-op Houses and Communes in London, England."
 authors = [
     { name = "Theodore Keloglou", email = "zf@sirodoht.com" }
 ]
-dependencies = []
+dependencies = [
+    "django>=5.0.2",
+]
 readme = "README.md"
 requires-python = ">= 3.8"
 license = { text = "MIT" }
