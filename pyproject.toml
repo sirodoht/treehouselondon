@@ -23,6 +23,9 @@ build-backend = "hatchling.build"
 managed = true
 dev-dependencies = []
 
+[tool.rye.scripts]
+devserver = "python ./src/treehouselondon/manage.py runserver"
+
 [tool.hatch.metadata]
 allow-direct-references = true
 
