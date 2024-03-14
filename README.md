@@ -7,6 +7,10 @@ Directory of Co-op Houses and Communes in London, England.
 This project uses [rye](https://github.com/astral-sh/rye) for Python and dependencies
 management.
 
+```sh
+rye sync
+```
+
 ## License
 
 MIT
