@@ -1,0 +1,18 @@
+[Unit]
+Description=treehouselondon
+After=network.target
+
+[Service]
+Type=simple
+User=deploy
+Group=www-data
+WorkingDirectory=/var/www/treehouselondon
+ExecStart=/var/www/treehouselondon/.venv/bin/gunicorn -b 127.0.0.1:5003 -w 4 treehouselondon.wsgi
+ExecReload=/bin/kill -HUP $MAINPID
+Environment="DEBUG={{ debug }}"
+Environment="SECRET_KEY={{ secret_key }}"
+TimeoutSec=15
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
