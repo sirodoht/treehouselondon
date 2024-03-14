@@ -1,6 +1,6 @@
 # treehouselondon
 
-Directory of Co-op Houses and Communes in London, England.
+Housing Co-operatives & Intentional Communities Directory for London, UK
 
 ## Development
 
