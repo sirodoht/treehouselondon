@@ -11,6 +11,13 @@ management.
 rye sync
 ```
 
+## Deploy
+
+```
+cd ansible/
+rye run ansible-playbook -v playbook.yaml
+```
+
 ## License
 
 MIT
