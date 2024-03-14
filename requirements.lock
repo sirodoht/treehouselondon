@@ -12,5 +12,9 @@ asgiref==3.7.2
     # via django
 django==5.0.2
     # via treehouselondon
+gunicorn==21.2.0
+    # via treehouselondon
+packaging==24.0
+    # via gunicorn
 sqlparse==0.4.4
     # via django
