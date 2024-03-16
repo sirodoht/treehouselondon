@@ -6,7 +6,6 @@ class Place(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     name = models.CharField(max_length=100)
     url = models.URLField("URL")
-    member_count = models.PositiveSmallIntegerField()
     borough = models.CharField(max_length=100)
 
     def __str__(self):

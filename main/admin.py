@@ -10,7 +10,6 @@ class PlaceAdmin(admin.ModelAdmin):
         "name",
         "url",
         "borough",
-        "member_count",
         "created_at",
         "updated_at",
     )
