@@ -1,7 +1,7 @@
 [project]
 name = "treehouselondon"
-version = "0.1.0"
-description = "Directory of Co-op Houses and Communes in London, England."
+version = "1.0.0"
+description = "Housing Co-operatives & Intentional Communities Directory for London, UK"
 authors = [
     { name = "Theodore Keloglou", email = "zf@sirodoht.com" }
 ]
