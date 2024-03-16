@@ -29,6 +29,29 @@
             tr:nth-child(even) { background: lightgoldenrodyellow; }
             @media (max-width: 700px) { th, td { padding: 2px; } }
         </style>
+
+        <script>
+            const COLORS = [
+                '#e67f73',
+                'blue',
+                'blueviolet',
+                'coral',
+                'darkturquoise',
+                'deeppink',
+                'deepskyblue',
+                'limegreen',
+                'red',
+                'royalblue',
+                'springgreen',
+                'yellowgreen',
+            ];
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelectorAll('.colored').forEach(elem => {
+                    const random = Math.floor(Math.random() * COLORS.length);
+                    elem.style.color = COLORS[random];
+                });
+            });
+        </script>
     </head>
 
     <body>
@@ -45,9 +68,9 @@
                 <a href="/" style="text-decoration: none;">treehouselondon.org</a>
             </div>
             <h1>
-                Housing Co-operatives
-                <br>& Intentional Communities
-                <br>Directory for London, UK
+                <span class="colored">Housing Co-operatives</span>
+                <br>& <span class="colored">Intentional Communities</span>
+                <br><span class="colored">Directory</span> <span style="color: #8f8f8f;">for London, UK</span>
             </h1>
         </header>
 
