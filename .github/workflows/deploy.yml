@@ -34,4 +34,9 @@ jobs:
       run: pip install ansible==9.3.0
 
     - name: Run ansible
-      run: cd ansible/ && ansible-playbook -v playbook.yaml
+      run: cd ansible/ && ansible-playbook playbook.yaml
+      env:
+        ANSIBLE_HOST: ${{ env.ANSIBLE_HOST }}
+        ANSIBLE_USER: ${{ env.ANSIBLE_USER }}
+        DEBUG: ${{ env.DEBUG }}
+        SECRET_KEY: ${{ secrets.SECRET_KEY }}
