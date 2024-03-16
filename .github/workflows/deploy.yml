@@ -20,13 +20,6 @@ jobs:
         mkdir -p ~/.ssh/
         echo "$SSH_KEY" > ~/.ssh/huron.key
         chmod 600 ~/.ssh/huron.key
-        cat >> ~/.ssh/config << EOF
-        Host huron
-          HostName treehouselondon.org
-          User root
-          IdentityFile ~/.ssh/huron.key
-          StrictHostKeyChecking no
-        EOF
       env:
         SSH_KEY: ${{ secrets.SSH_KEY }}
 
