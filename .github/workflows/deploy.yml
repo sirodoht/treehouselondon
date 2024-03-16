@@ -15,7 +15,7 @@ jobs:
       with:
         python-version: "3.12"
 
-    - name: Configure SSH
+    - name: Load SSH key
       run: |
         mkdir -p ~/.ssh/
         echo "$SSH_KEY" > ~/.ssh/huron.key
@@ -27,10 +27,7 @@ jobs:
       run: pip install ansible==9.3.0
 
     - name: Run ansible
-      run: |
-        ssh huron uname
-        echo $ANSIBLE_HOST
-        cd ansible/ && ansible-playbook playbook.yaml --start-at-task="clone"
+      run: cd ansible/ && ansible-playbook playbook.yaml --start-at-task="clone"
       env:
         ANSIBLE_HOST_KEY_CHECKING: False
         ANSIBLE_PRIVATE_KEY_FILE: "~/.ssh/huron.key"
