@@ -39,7 +39,7 @@ jobs:
         echo $ANSIBLE_HOST
         cd ansible/ && ansible-playbook playbook.yaml
       env:
-        ANSIBLE_HOST: ${{ env.ANSIBLE_HOST }}
-        ANSIBLE_USER: ${{ env.ANSIBLE_USER }}
-        DEBUG: ${{ env.DEBUG }}
+        ANSIBLE_HOST: ${{ vars.ANSIBLE_HOST }}
+        ANSIBLE_USER: ${{ vars.ANSIBLE_USER }}
+        DEBUG: ${{ vars.DEBUG }}
         SECRET_KEY: ${{ secrets.SECRET_KEY }}
