@@ -37,7 +37,7 @@ jobs:
       run: |
         ssh huron uname
         echo $ANSIBLE_HOST
-        cd ansible/ && ansible-playbook playbook.yaml
+        cd ansible/ && ansible-playbook playbook.yaml --start-at-task="clone"
       env:
         ANSIBLE_HOST_KEY_CHECKING: False
         ANSIBLE_PRIVATE_KEY_FILE: "~/.ssh/huron.key"
