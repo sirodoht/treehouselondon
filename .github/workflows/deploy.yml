@@ -39,6 +39,8 @@ jobs:
         echo $ANSIBLE_HOST
         cd ansible/ && ansible-playbook playbook.yaml
       env:
+        ANSIBLE_HOST_KEY_CHECKING: False
+        ANSIBLE_PRIVATE_KEY_FILE: "~/.ssh/huron.key"
         ANSIBLE_HOST: ${{ vars.ANSIBLE_HOST }}
         ANSIBLE_USER: ${{ vars.ANSIBLE_USER }}
         DEBUG: ${{ vars.DEBUG }}
