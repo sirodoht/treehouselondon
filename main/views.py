@@ -8,6 +8,6 @@ def index(request):
         request,
         "main/index.html",
         {
-            "place_list": models.Place.objects.all(),
+            "place_list": models.Place.objects.all().order_by("?"),
         },
     )
