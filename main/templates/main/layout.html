@@ -13,12 +13,21 @@
         <style>
             body { font-family: monospace; line-height: 1.5; font-size: 16px; }
             a { color: black; }
-            header { margin: 64px; }
-            main { margin: 64px; }
+
+            header { max-width: 1350px; margin: 8px auto; }
+            section { max-width: 1350px; margin: 32px auto; }
+            section p { max-width: 650px; }
+            main { max-width: 1350px; margin: 32px auto; }
+
+            @media (max-width: 900px) { h1 { font-size: 24px; } }
+            @media (max-width: 700px) { h1 { font-size: 22px; } }
+            @media (max-width: 700px) { body { font-size: 14px; } }
+
             table { border-collapse: collapse; border: 1px solid black; }
             th { padding: 8px; text-align: left; }
             td { padding: 8px; border: 1px solid black; }
             tr:nth-child(even) { background: lightgoldenrodyellow; }
+            @media (max-width: 700px) { th, td { padding: 2px; } }
         </style>
     </head>
 
@@ -32,7 +41,9 @@
         {% endif %}
 
         <header>
-            <div>treehouselondon.org</div>
+            <div>
+                <a href="/" style="text-decoration: none;">treehouselondon.org</a>
+            </div>
             <h1>
                 Housing Co-operatives
                 <br>& Intentional Communities
@@ -40,10 +51,45 @@
             </h1>
         </header>
 
+        <section>
+            <p>
+                This website is a list of houses that are either housing co-ops or
+                intentional communities.
+            <p>
+            <p>
+                <strong>Housing co-ops</strong> are houses owned by the community and
+                controlled by their residents.
+            <p>
+            <p>
+                <strong>Intentional communities</strong> are residential communities
+                with a high degree of social cohesion and teamwork (in comparison to
+                shared housing).
+            </p>
+        </section>
+
         {% block content %}
         {% endblock %}
 
-        {% block scripts %}
-        {% endblock %}
+        <section>
+            <h2>FAQ</h2>
+            <p>
+                – What qualifies as inside London?
+                <br>– Any building inside a London Borough.
+            </p>
+            <p>
+                – How to submit an addition or a change?
+                <br>– Please email <a href="mailto:admin@treehouselondon.org">admin@treehouselondon.org</a>
+            </p>
+            <p>
+                – What is the license use of this?
+                <br>– All information is public sourced from the websites linked. The source code of this website is open (see <a href="https://github.com/sirodoht/treehouselondon">here</a>).
+            </p>
+            <p>
+                – Why does this website exists?
+                <br>– More and more people are interested in living without landlords
+                and/or with their friends. This is a space where we can collect certain
+                info on how to do this in London, UK.
+            </p>
+        </section>
     </body>
 </html>
